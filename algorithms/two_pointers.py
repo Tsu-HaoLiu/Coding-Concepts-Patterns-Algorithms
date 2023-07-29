@@ -14,10 +14,12 @@ def two_pointers(array):
     return True
 
 
+nums1 = [1,2,3,0,0,0]
+
+nums1.insert()
 
 array1 = 'supercalifragilisticexpialidocious'
 print(two_pointers(array1) == False)
 
 array2 = 'racecar'
 print(two_pointers(array2) == True)
-
