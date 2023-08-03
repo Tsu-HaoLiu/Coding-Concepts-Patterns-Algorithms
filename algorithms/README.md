@@ -68,6 +68,39 @@ Leetcode problems:
 
 ## Sliding Window
 
+```python
+def sliding_window(array):
+        # count = 0
+        # for i in range(len(s)-2):
+        #     if len(set(s[i:i+3])) == 3:
+        #         count+=1
+        # return count
+
+        ###########
+        count = 0
+        start = 0
+        end = 3
+
+        while end <= len(s):
+            if len(set(s[start:end])) == 3:
+                count += 1
+                print(s[start:end])
+            
+            start += 1
+            end += 1
+
+        return count 
+
+```
+
+Leetcode problems:
+- https://leetcode.com/problems/best-time-to-buy-and-sell-stock/
+- https://leetcode.com/problems/substrings-of-size-three-with-distinct-characters/
+- https://leetcode.com/problems/longest-substring-without-repeating-characters/
+- https://leetcode.com/problems/longest-repeating-character-replacement/
+- https://leetcode.com/problems/permutation-in-string/
+
+
 ## Fast+Slow Pointers 
 
 Leetcode problems:
