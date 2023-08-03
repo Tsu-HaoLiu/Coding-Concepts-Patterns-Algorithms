@@ -94,11 +94,13 @@ def sliding_window(array):
 ```
 
 Leetcode problems:
-- https://leetcode.com/problems/best-time-to-buy-and-sell-stock/
+- https://leetcode.com/problems/best-time-to-buy-and-sell-stock/ *
 - https://leetcode.com/problems/substrings-of-size-three-with-distinct-characters/
 - https://leetcode.com/problems/longest-substring-without-repeating-characters/
 - https://leetcode.com/problems/longest-repeating-character-replacement/
 - https://leetcode.com/problems/permutation-in-string/
+- https://leetcode.com/problems/minimum-window-substring/
+- https://leetcode.com/problems/sliding-window-maximum/
 
 
 ## Fast+Slow Pointers 
