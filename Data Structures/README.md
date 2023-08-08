@@ -51,7 +51,70 @@ for row in range(len(matrix)):
 
 ## Hashing and Maps
 
+Hashing and maps are concepts used to efficiently store, retrieve, and manage data. They are often used to implement data structures that allow quick access to information based on a key.
+A map, also known as an associative array, dictionary, or hash map, is a data structure that stores a collection of key-value pairs. It allows you to associate a value with a unique key, and then quickly retrieve that value based on the key. Maps are often implemented using hashing to achieve fast access times.
+
+```python
+# Creating a map (dictionary)
+my_dict = {
+    "name": "John",
+    "age": 30,
+    "city": "New York"
+}
+
+# Accessing values using keys
+print(my_dict["name"])  # Output: John
+
+# Adding a new key-value pair
+my_dict["occupation"] = "Engineer"
+
+# Iterating through keys and values
+for key, value in my_dict.items():
+    print(key, ":", value)
+
+```
+
 ## Linked Lists
+
+A linked list is a linear data structure used to store a sequence of elements, where each element is represented by a node. Unlike arrays, linked lists do not have a fixed size and do not store elements in contiguous memory locations. Instead, each node in a linked list contains the element itself and a reference (or pointer) to the next node in the sequence.
+
+```python
+class Node:
+    def __init__(self, data):
+        self.val = data
+        self.next = None
+
+class LinkedList:
+    def __init__(self):
+        self.head = None
+
+    def append(self, data):
+        new_node = Node(data)
+        if not self.head:
+            self.head = new_node
+            return
+        current = self.head
+        while current.next:
+            current = current.next
+        current.next = new_node
+
+    def display(self):
+        current = self.head
+        while current:
+            print(current.data, end=" -> ")
+            current = current.next
+        print("None")
+
+# Creating a linked list and adding elements
+my_list = LinkedList()
+my_list.append(10)
+my_list.append(20)
+my_list.append(30)
+
+# Displaying the linked list
+my_list.display()
+
+```
 
 ## Stacks
 
