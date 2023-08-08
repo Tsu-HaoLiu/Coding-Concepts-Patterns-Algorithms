@@ -10,7 +10,44 @@
 
 An array is a data structure that stores a collection of elements, such as numbers, strings, or objects, in a linear sequence. Each element in an array is identified by an index, which is a numeric value indicating the position of the element within the array. Arrays are commonly used to group related data together for easier manipulation and access.
 
+```python
+# Creating an array of integers
+my_array = [10, 20, 30, 40, 50]
+
+# Accessing elements by index
+print(my_array[0])  # Output: 10
+print(my_array[2])  # Output: 30
+
+# Modifying elements
+my_array[3] = 45
+
+# Looping through the array
+for element in my_array:
+    print(element)
+```
+
 ## Matrix
+
+A matrix is a two-dimensional rectangular array of elements, typically numbers, symbols, or other data types. Each element in a matrix is identified by its row and column index.
+
+```python
+# Creating a matrix
+matrix = [
+    [1, 2, 3],
+    [4, 5, 6]
+]
+
+# Accessing elements
+print(matrix[0][1])  # Output: 2
+
+# Modifying elements
+matrix[1][2] = 8
+
+# Looping through the matrix
+for row in range(len(matrix)):
+    for col in range(len(matrix[0])):
+        print(element[row][col])
+```
 
 ## Hashing and Maps
 
