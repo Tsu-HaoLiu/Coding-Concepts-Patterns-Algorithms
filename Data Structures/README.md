@@ -118,6 +118,50 @@ my_list.display()
 
 ## Stacks
 
+A stack is a linear data structure that follows the Last-In-First-Out (LIFO) principle, which means that the last element added to the stack is the first one to be removed. Stacks are commonly used to manage data in a way that resembles a physical stack of objects, like a stack of plates.
+
+```python
+class Stack:
+    def __init__(self):
+        self.items = []
+
+    def push(self, item):
+        self.items.append(item)
+
+    def pop(self):
+        if not self.is_empty():
+            return self.items.pop()
+        else:
+            return None
+
+    def peek(self):
+        if not self.is_empty():
+            return self.items[-1]
+        else:
+            return None
+
+    def is_empty(self):
+        return self.size == 0
+
+    def size(self):
+        return len(self.items)
+
+# Creating a stack and performing operations
+my_stack = Stack()
+my_stack.push(10)
+my_stack.push(20)
+my_stack.push(30)
+
+print("Top element:", my_stack.peek())  # Output: 30
+
+print("Popped:", my_stack.pop())  # Output: 30
+print("Popped:", my_stack.pop())  # Output: 20
+
+print("Is empty?", my_stack.is_empty())  # Output: False
+print("Size:", my_stack.size())  # Output: 1
+
+```
+
 ## Queues
 
 ## Trees
