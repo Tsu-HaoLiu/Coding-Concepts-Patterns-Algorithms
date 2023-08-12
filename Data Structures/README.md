@@ -164,6 +164,52 @@ print("Size:", my_stack.size())  # Output: 1
 
 ## Queues
 
+A queue is a linear data structure that follows the First-In-First-Out (FIFO) principle, meaning that the first element added to the queue is the first one to be removed. Queues are used to manage data in a way that resembles a real-life waiting line, like people waiting in a queue at a ticket counter.
+
+```python
+from collections import deque
+
+class Queue:
+    def __init__(self):
+        self.items = deque()
+
+    def enqueue(self, item):
+        self.items.append(item)
+
+    def pop(self):
+        if not self.is_empty():
+            return self.items.popleft()
+        else:
+            return None
+
+    def peek(self):
+        if not self.is_empty():
+            return self.items[0]
+        else:
+            return None
+
+    def is_empty(self):
+        return len(self.items) == 0
+
+    def size(self):
+        return len(self.items)
+
+# Creating a queue and performing operations
+my_queue = Queue()
+my_queue.enqueue(10)
+my_queue.enqueue(20)
+my_queue.enqueue(30)
+
+print("First element:", my_queue.peek())  # Output: 10
+
+print("Pop left:", my_queue.pop())  # Output: 10
+print("Pop left:", my_queue.pop())  # Output: 20
+
+print("Is empty?", my_queue.is_empty())  # Output: False
+print("Size:", my_queue.size())  # Output: 1
+
+```
+
 ## Trees
 
 ## Graphs
