@@ -212,6 +212,88 @@ print("Size:", my_queue.size())  # Output: 1
 
 ## Trees
 
+A tree is a hierarchical data structure that consists of nodes connected by edges. 
+
+- **Root Node**: The topmost node in a tree, serving as the starting point for traversal.
+- **Internal Nodes**: Nodes that have child nodes. They are not the root or leaves of the tree.
+- **Leaf Nodes**: Nodes with no children, located at the ends of branches.
+
+```
+    5
+   / \
+  3   8
+ / \ / \
+1  4 7  10
+```
+
+```python
+class TreeNode:
+    def __init__(self, value):
+        self.value = value
+        self.left = None
+        self.right = None
+
+# Inorder Traversal (Left, Root, Right)
+def inorder_traversal(node):
+    if node is not None:
+        inorder_traversal(node.left)
+        print(node.value, end=' ')
+        inorder_traversal(node.right)
+
+# Postorder Traversal (Left, Right, Root)
+def postorder_traversal(node):
+    if node is not None:
+        postorder_traversal(node.left)
+        postorder_traversal(node.right)
+        print(node.value, end=' ')
+
+# Preorder Traversal (Root, Left, Right)
+def preorder_traversal(node):
+    if node is not None:
+        print(node.value, end=' ')
+        preorder_traversal(node.left)
+        preorder_traversal(node.right)
+
+# Constructing a simple binary tree
+root = TreeNode(5)
+root.left = TreeNode(3)
+root.right = TreeNode(8)
+root.left.left = TreeNode(1)
+root.left.right = TreeNode(4)
+root.right.left = TreeNode(7)
+root.right.right = TreeNode(10)
+
+# 1 3 4 5 7 8 10 
+print("\nInorder Traversal:")
+inorder_traversal(root)
+#  /\
+# /  \
+#     v 
+
+# 1 4 3 7 10 8 5 
+print("\nPostorder Traversal:")
+postorder_traversal(root)
+#  \
+#   \
+# --->
+
+# 5 3 1 4 8 7 10 
+print("\nPreorder Traversal:")
+preorder_traversal(root)
+#   /  /
+#  /  /
+# /  /
+#v  v
+```
+
+```
+    5
+   / \
+  3   8
+ / \ / \
+1  4 7  10
+```
+
 ## Graphs
 
 ## Heaps
