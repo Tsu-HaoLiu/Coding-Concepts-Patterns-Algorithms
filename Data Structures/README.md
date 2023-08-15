@@ -298,5 +298,45 @@ preorder_traversal(root)
 
 ## Heaps
 
+A heap is a specialized binary tree-based data structure that satisfies the heap property. The heap property ensures that the value of each node is either greater than or equal to (max-heap) or less than or equal to (min-heap) the values of its children. This property allows efficient access to the maximum (or minimum) element in the heap.
+
+Heaps are often used to implement priority queues, which are data structures that allow efficient retrieval of the highest-priority (or lowest-priority) element. Priority queues are useful in various applications, such as scheduling tasks, graph algorithms (Dijkstra's algorithm), and more.
+
+```python
+import heapq
+
+# Creating a min-heap
+min_heap = []
+heapq.heappush(min_heap, 5)
+heapq.heappush(min_heap, 2)
+heapq.heappush(min_heap, 9)
+heapq.heappush(min_heap, 1)
+heapq.heappush(min_heap, 7)
+
+# Printing the elements in the min-heap
+print("Min-Heap elements:", min_heap)
+
+# Popping elements from the min-heap in ascending order
+while min_heap:
+    print(heapq.heappop(min_heap)) # [1, 2, 5, 7, 9]
+
+
+# Creating a max-heap (by negating the values)
+max_heap = []
+heapq.heappush(max_heap, -5)
+heapq.heappush(max_heap, -2)
+heapq.heappush(max_heap, -9)
+heapq.heappush(max_heap, -1)
+heapq.heappush(max_heap, -7)
+
+# Printing the elements in the max-heap
+print("Max-Heap elements (negated):", max_heap)
+
+# Popping elements from the max-heap in descending order
+while max_heap:
+    print(-heapq.heappop(max_heap)) # [9, 7, 5, 2, 1]
+
+```
+
 ## Greedy Algorithm
 
