@@ -296,6 +296,37 @@ preorder_traversal(root)
 
 ## Graphs
 
+A graph is a fundamental data structure that represents a collection of nodes (also called vertices) and the connections between those nodes (also called edges). Graphs are used to model relationships between entities
+
+```python
+class Graph:
+    def __init__(self):
+        self.graph = {}
+
+    def add_edge(self, u, v):
+        if u not in self.graph:
+            self.graph[u] = []
+        if v not in self.graph:
+            self.graph[v] = []
+
+        self.graph[u].append(v)
+        self.graph[v].append(u)
+
+    def get_neighbors(self, node):
+        return self.graph.get(node, [])
+
+# Create a graph
+g = Graph()
+g.add_edge('A', 'B')
+g.add_edge('A', 'C')
+g.add_edge('B', 'C')
+g.add_edge('B', 'D')
+
+# Get neighbors of a node
+print("Neighbors of 'A':", g.get_neighbors('A'))
+print("Neighbors of 'B':", g.get_neighbors('B'))
+```
+
 ## Heaps
 
 A heap is a specialized binary tree-based data structure that satisfies the heap property. The heap property ensures that the value of each node is either greater than or equal to (max-heap) or less than or equal to (min-heap) the values of its children. This property allows efficient access to the maximum (or minimum) element in the heap.
