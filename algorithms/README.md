@@ -28,6 +28,9 @@ Leetcode problems:
 
 ## Binary Search 
 Binary Search is defined as a searching algorithm used in a sorted array by repeatedly dividing the search interval in half. The idea of binary search is to use the information that the array is sorted and reduce the time complexity to O(log N). 
+
+![Binary Search](proxy-image-1.jpg)
+
 ```python
 def binary_search(array, target):
     # if target in nums:
@@ -67,6 +70,9 @@ Leetcode problems:
 
 
 ## Sliding Window
+Sliding window typically consists of two pointers, often denoted as left and right, that define the boundaries of the current window. These pointers are adjusted as the window slides through the array or string to solve the problem at hand.
+
+![Sliding Window](proxy-image.jpg)
 
 ```python
 def sliding_window(array):
@@ -125,3 +131,34 @@ Leetcode problems:
 ## Memoization 
 
 ## DP
+
+## Bubble Sort
+
+Bubble Sort is a simple sorting algorithm that repeatedly steps through the list to be sorted, compares adjacent elements, and swaps them if they are in the wrong order. This process is repeated for each element in the list until the entire list is sorted. The algorithm gets its name from the way smaller elements "bubble" to the top of the list in each pass.
+
+![Bubble Sorting](proxy-image.png)
+
+```python
+def bubble_sort(arr):
+    arr_length = len(arr)
+    
+    for i in range(arr_length):
+        # Last i elements are already in place
+        for j in range(0, arr_length-i-1):
+            if arr[j] > arr[j+1]:
+                # Swap the elements if they are in the wrong order
+                arr[j], arr[j+1] = arr[j+1], arr[j]
+
+# Example usage
+arr = [64, 34, 25, 12, 22, 11, 90]
+bubble_sort(arr)
+print("Sorted array:", arr) # [11, 12, 22, 25, 34, 64, 90]
+```
+
+## Quick Sort
+
+## Merge Sort
+
+## Insertion Sort
+
+## Selection Sort
