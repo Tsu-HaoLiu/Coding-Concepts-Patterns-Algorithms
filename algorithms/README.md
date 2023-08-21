@@ -143,13 +143,10 @@ def bubble_sort(arr):
     arr_length = len(arr)
     
     for i in range(arr_length):
-        # Last i elements are already in place
         for j in range(0, arr_length-i-1):
             if arr[j] > arr[j+1]:
-                # Swap the elements if they are in the wrong order
                 arr[j], arr[j+1] = arr[j+1], arr[j]
 
-# Example usage
 arr = [64, 34, 25, 12, 22, 11, 90]
 bubble_sort(arr)
 print("Sorted array:", arr) # [11, 12, 22, 25, 34, 64, 90]
